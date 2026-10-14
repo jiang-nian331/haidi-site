@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>海底小分队 - 海洋探险家园</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .welcome-tag {
+      display: inline-block;
+      background: rgba(249, 231, 159, 0.15);
+      border: 1px dashed #f9e79f;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 15px;
+      color: #fdebd0;
+      margin-bottom: 15px;
+    }
+    .feature-icon { font-size: 28px; margin-right: 8px; }
+
+    /* 动态视频横幅 */
+    .hero-video-wrap {
+      position: relative;
+      margin-top: 15px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+    .hero-video-wrap video {
+      width: 100%;
+      display: block;
+    }
+    .hero-video-overlay {
+      position: absolute;
+      bottom: 12px; left: 16px;
+      color: #fff;
+      font-size: 14px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+
+    /* 静态图动态化：呼吸浮动 */
+    .float-img {
+      animation: floaty 4s ease-in-out infinite;
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .bubble-bg {
+      position: relative;
+    }
+    .bubble-bg::after {
+      content: "○ ○ ○";
+      position: absolute;
+      bottom: 10px; left: 20px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 12px;
+      font-size: 20px;
+      animation: bubbleUp 3s linear infinite;
+    }
+    @keyframes bubbleUp {
+      0% { opacity: 0; transform: translateY(0); }
+      50% { opacity: 0.7; }
+      100% { opacity: 0; transform: translateY(-40px); }
+    }
+
+    /* 外部链接徽章 */
+    .ext-badge {
+      display: inline-block;
+      font-size: 12px;
+      background: #f9e79f;
+      color: #0a3d62;
+      padding: 1px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">🐙 海底小分队</div>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="page1.html">队员介绍</a>
+      <a href="page2.html">海洋图鉴 & 留言</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 英雄横幅：静态图改为动态浮动效果 -->
+    <div class="hero">
+      <span class="welcome-tag" style="letter-spacing:3px; font-weight:bold;">🌊 探 索 · 发 现 · 保 护 🌊</span>
+      <h1>海底小分队</h1>
+      <p style="color:#d6eaf8; font-size:18px;">—— 一群勇敢的海洋探险家，驾驶章鱼堡，守护蔚蓝大海 ——</p>
+      <!-- 原图保留，加 CSS 动态浮动 + 气泡动画 -->
+      <div class="bubble-bg">
+        <img src="images/hero-barnacles.jpg" alt="海底小分队巴克队长在海中探险" class="float-img" width="600">
+      </div>
+    </div>
+
+    <!-- 网站简介 -->
+    <h2>关于我们</h2>
+    <p>
+      海底小分队（Octonauts）是一支由巴克队长带领的海洋探险队伍，基地设在神秘的章鱼堡中。
+      队员们驾驶各种先进的舰艇，深入海洋各处，探索未知生物、救助海洋动物、保护生态环境。
+      本网站带你认识每一位队员，了解他们遇到的神奇海洋生物。
+      想了解更多官方设定？可访问
+      <a href="https://baike.baidu.com/item/%E6%B5%B7%E5%BA%95%E5%B0%8F%E7%BC%A4%E9%98%9F" target="_blank">百度百科：海底小纵队<span class="ext-badge">外链↗</span></a>。
+    </p>
+
+    <!-- 章鱼堡与舰艇 -->
+    <h2>🐙 章鱼堡与舰艇编队</h2>
+    <ul class="feature-list">
+      <li><strong>章鱼堡（Octopod）</strong>：小分队的海底基地，形似一只巨大章鱼，内置控制室、实验室、车库和宿舍。</li>
+      <li><strong>灯笼鱼艇（Gup-A）</strong>：主力舰艇，巴克队长指挥，适合常规搜救与巡航。</li>
+      <li><strong>虎鲨艇（Gup-B）</strong>：呱唧驾驶，速度极快，适合追逐与紧急救援。</li>
+      <li><strong>蓝鲸艇（Gup-C）</strong>：谢灵通常用，大型运输与生物观察平台。</li>
+      <li><strong>魔鬼鱼艇（Gup-D）</strong>：突突兔改装，灵活穿梭珊瑚礁与狭窄水道。</li>
+      <li><strong>企鹅艇（Gup-E）</strong>：皮医生专用，配备医疗舱，适合极地与浅海救援。</li>
+    </ul>
+
+    <!-- 网站特色 -->
+    <h2>网站特色</h2>
+    <ul class="feature-list">
+      <li><span class="feature-icon">🐻</span>认识六位性格各异的小分队队员</li>
+      <li><span class="feature-icon">🐋</span>图鉴式了解神奇的海洋生物</li>
+      <li><span class="feature-icon">✉️</span>留言板与我们互动交流</li>
+      <li><span class="feature-icon">🌊</span>沉浸式海洋主题视觉设计（动态视频 + CSS 动效）</li>
+    </ul>
+
+    <!-- 探险任务流程 -->
+    <h2>一次探险任务的流程</h2>
+    <ol class="steps">
+      <li>章鱼堡收到海洋生物求救信号或发现异常</li>
+      <li>巴克队长召集队员，分配任务与舰艇</li>
+      <li>队员驾驶舰艇出发，抵达目标海域</li>
+      <li>谢灵通进行生物观察与记录，皮医生准备医疗救援</li>
+      <li>完成任务后返回章鱼堡，总结经验</li>
+    </ol>
+
+    <!-- 快速导航卡片 -->
+    <h2>快速进入</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/captain-barnacles.jpg" alt="巴克队长" class="float-img">
+        <h3>队员介绍</h3>
+        <p>认识巴克队长、呱唧、皮医生等六位核心队员</p>
+        <a href="page1.html" class="back-btn">前往队员页 →</a>
+      </div>
+      <div class="card">
+        <!-- 这里换成动态视频 -->
+        <div class="hero-video-wrap" style="margin-bottom:12px;">
+          <video autoplay loop muted playsinline width="100%">
+            <source src="videos/ocean-reef.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3>海洋图鉴</h3>
+        <p>浏览鲸鱼、鲨鱼、水母等神奇海洋生物档案（上方为动态珊瑚礁实景）</p>
+        <a href="page2.html" class="back-btn">前往图鉴页 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>🌊 海底小分队主题网站 | 《网络技术基础》期末作业 🌊</p>
+    <p>图片与视频均用于学习展示 ·
+      <a href="https://www.bilibili.com" target="_blank">B站<span class="ext-badge">外链↗</span></a> ·
+      <a href="https://www.douban.com" target="_blank">豆瓣<span class="ext-badge">外链↗</span></a>
+    </p>
+  </div>
+
+</body>
+</html>
