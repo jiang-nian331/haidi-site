@@ -1,0 +1,278 @@
+/* ============================================
+   海底小分队网站 —— 外部样式表 style.css
+   这是「外部样式表」：独立 .css 文件，
+   每个 html 用 <link rel="stylesheet" href="style.css"> 引入，
+   全站共享、改一处全改。
+   ============================================ */
+
+/* 全局：页面身体样式 */
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: linear-gradient(180deg, #0a3d62 0%, #1e6091 40%, #3b82b8 70%, #5dade2 100%);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* 顶部导航栏 */
+.navbar {
+  background: rgba(6, 37, 66, 0.85);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f9e79f;
+  letter-spacing: 2px;
+}
+
+.navbar .nav-links a {
+  color: #aed6f1;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #f9e79f;
+}
+
+/* 主内容区 */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* 一级标题 */
+h1 {
+  color: #f9e79f;
+  text-align: center;
+  font-size: 36px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* 二级标题 */
+h2 {
+  color: #fdebd0;
+  border-left: 5px solid #f9e79f;
+  padding-left: 12px;
+  margin-top: 35px;
+  font-size: 24px;
+}
+
+/* 三级标题 */
+h3 {
+  color: #aed6f1;
+  font-size: 19px;
+}
+
+/* 段落 */
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* 超链接 */
+a {
+  color: #85c1e9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #f9e79f;
+}
+
+/* 队员卡片网格 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f9e79f;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 8px 0;
+  color: #f9e79f;
+}
+
+.card p {
+  font-size: 14px;
+  color: #d6eaf8;
+  margin: 5px 0;
+}
+
+/* 生物图鉴表格 */
+.creature-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.creature-table th {
+  background: rgba(249, 231, 159, 0.25);
+  color: #f9e79f;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.creature-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+}
+
+.creature-table img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* 表单样式 */
+.message-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.message-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #aed6f1;
+  font-weight: bold;
+}
+
+.message-form input[type="text"],
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #5dade2;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a5276;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.message-form button {
+  background: #f9e79f;
+  color: #0a3d62;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-form button:hover {
+  background: #f7dc6f;
+}
+
+/* 有序列表（任务步骤） */
+ol.steps {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px 40px;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* 无序列表 */
+ul.feature-list {
+  line-height: 2;
+  font-size: 16px;
+}
+
+ul.feature-list li::marker {
+  color: #f9e79f;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: #aed6f1;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 40px;
+}
+
+/* 英雄横幅 */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 返回首页按钮 */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: rgba(249, 231, 159, 0.2);
+  border: 1px solid #f9e79f;
+  border-radius: 20px;
+  color: #f9e79f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background: #f9e79f;
+  color: #0a3d62;
+  text-decoration: none;
+}
